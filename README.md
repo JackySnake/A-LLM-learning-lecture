@@ -6,7 +6,7 @@
 
 ## 这是什么
 
-这是我在系统学习大语言模型过程中整理的一套笔记讲义，从 2025 年初开始，按 15 周的计划推进，目前已完成 Phase 0 + Week 1–10，覆盖从 Transformer 基础架构到多智能体系统的完整技术栈。
+这是我在系统学习大语言模型过程中整理的一套笔记讲义，从 2025 年末开始，按 15 周的计划推进，目前已完成 Phase 0 + Week 1–10，覆盖从 Transformer 基础架构到多智能体系统的完整技术栈。
 
 讲义的撰写方式有点特别：我以自己的知识背景为基础，大量借助 AI（主要是 Claude）来帮我整理内容、推导细节、补充前沿动态，中间也穿插了很多轮交互讨论，让知识点逐渐丰富起来。所以这套讲义既不是纯人工写作，也不是简单的 AI 生成——更像是一个持续的**人机协作学习过程**的记录。
 
@@ -18,7 +18,7 @@
 
 | 章节 | 主题 | 核心内容 | 在线阅读 | PDF |
 |------|------|----------|----------|-----|
-| Phase 0 | 大模型完整生命周期导引 | 预训练 → SFT → RLHF → 推理部署，全局架构鸟瞰 | [📖 MD](Phase0讲义.md) | [📄 PDF](pdfs/Phase0讲义.pdf) |
+| Phase 0 | 大模型完整生命周期导引 | 预训练 → SFT → RLHF → 推理部署，全局架构鸟瞰。它可以让人较快的了解大模型全景，每个部分在后面的Week讲义里都有更详细的讲解 | [📖 MD](Phase0讲义.md) | [📄 PDF](pdfs/Phase0讲义.pdf) |
 | Week 1 | 现代大模型架构原理 | Transformer 精讲、RoPE、RMSNorm、SiLU/SwiGLU | [📖 MD](Week1讲义.md) | [📄 PDF](pdfs/Week1讲义.pdf) |
 | Week 2 | 进阶架构与大规模训练工程 | MoE、GQA/MQA/MLA、3D 并行、DeepSpeed/FSDP | [📖 MD](Week2讲义.md) | [📄 PDF](pdfs/Week2讲义.pdf) |
 | Week 3 | 参数高效微调与 SFT 实战 | LoRA、QLoRA、DoRA、Prefix Tuning、Adapter | [📖 MD](Week3讲义.md) | [📄 PDF](pdfs/Week3讲义.pdf) |
