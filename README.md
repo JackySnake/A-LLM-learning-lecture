@@ -16,19 +16,19 @@
 
 ## 讲义目录
 
-| 章节 | 主题 | 核心内容 | 下载 |
-|------|------|----------|------|
-| Phase 0 | 大模型完整生命周期导引 | 预训练 → SFT → RLHF → 推理部署，全局架构鸟瞰 | [📄 PDF](pdfs/Phase0讲义.pdf) |
-| Week 1 | 现代大模型架构原理 | Transformer 精讲、RoPE、RMSNorm、SiLU/SwiGLU | [📄 PDF](pdfs/Week1讲义.pdf) |
-| Week 2 | 进阶架构与大规模训练工程 | MoE、GQA/MQA/MLA、3D 并行、DeepSpeed/FSDP | [📄 PDF](pdfs/Week2讲义.pdf) |
-| Week 3 | 参数高效微调与 SFT 实战 | LoRA、QLoRA、DoRA、Prefix Tuning、Adapter | [📄 PDF](pdfs/Week3讲义.pdf) |
-| Week 4 | RLHF 完整体系与对齐算法 | PPO、RLHF pipeline、DPO、DeepSeek GRPO | [📄 PDF](pdfs/Week4讲义.pdf) |
-| Week 5 | 持续学习与模型融合 | 灾难性遗忘、EWC、Task Arithmetic、TIES、DARE | [📄 PDF](pdfs/Week5讲义.pdf) |
-| Week 6 | 推理优化与框架生态 | PagedAttention、Continuous Batching、Speculative Decoding、vLLM | [📄 PDF](pdfs/Week6讲义.pdf) |
-| Week 7 | Test-Time Scaling 与高级推理策略 | 解码策略、树搜索（MCTS）、过程奖励模型（PRM） | [📄 PDF](pdfs/Week7讲义.pdf) |
-| Week 8 | 多模态与长序列处理 | Qwen-VL、M-RoPE、YaRN、StreamingLLM、LongRoPE | [📄 PDF](pdfs/Week8讲义.pdf) |
-| Week 9 | Agent 基础范式与记忆系统 | ReAct、Tool Use、分层记忆架构、Context Rot | [📄 PDF](pdfs/Week9讲义.pdf) |
-| Week 10 | 多智能体系统与工程案例 | LangGraph、AutoGen、Claude Code 架构、Hermes | [📄 PDF](pdfs/Week10讲义.pdf) |
+| 章节 | 主题 | 核心内容 | 在线阅读 | PDF |
+|------|------|----------|----------|-----|
+| Phase 0 | 大模型完整生命周期导引 | 预训练 → SFT → RLHF → 推理部署，全局架构鸟瞰 | [📖 MD](Phase0讲义.md) | [📄 PDF](pdfs/Phase0讲义.pdf) |
+| Week 1 | 现代大模型架构原理 | Transformer 精讲、RoPE、RMSNorm、SiLU/SwiGLU | [📖 MD](Week1讲义.md) | [📄 PDF](pdfs/Week1讲义.pdf) |
+| Week 2 | 进阶架构与大规模训练工程 | MoE、GQA/MQA/MLA、3D 并行、DeepSpeed/FSDP | [📖 MD](Week2讲义.md) | [📄 PDF](pdfs/Week2讲义.pdf) |
+| Week 3 | 参数高效微调与 SFT 实战 | LoRA、QLoRA、DoRA、Prefix Tuning、Adapter | [📖 MD](Week3讲义.md) | [📄 PDF](pdfs/Week3讲义.pdf) |
+| Week 4 | RLHF 完整体系与对齐算法 | PPO、RLHF pipeline、DPO、DeepSeek GRPO | [📖 MD](Week4讲义.md) | [📄 PDF](pdfs/Week4讲义.pdf) |
+| Week 5 | 持续学习与模型融合 | 灾难性遗忘、EWC、Task Arithmetic、TIES、DARE | [📖 MD](Week5讲义.md) | [📄 PDF](pdfs/Week5讲义.pdf) |
+| Week 6 | 推理优化与框架生态 | PagedAttention、Continuous Batching、Speculative Decoding、vLLM | [📖 MD](Week6讲义.md) | [📄 PDF](pdfs/Week6讲义.pdf) |
+| Week 7 | Test-Time Scaling 与高级推理策略 | 解码策略、树搜索（MCTS）、过程奖励模型（PRM） | [📖 MD](Week7讲义.md) | [📄 PDF](pdfs/Week7讲义.pdf) |
+| Week 8 | 多模态与长序列处理 | Qwen-VL、M-RoPE、YaRN、StreamingLLM、LongRoPE | [📖 MD](Week8讲义.md) | [📄 PDF](pdfs/Week8讲义.pdf) |
+| Week 9 | Agent 基础范式与记忆系统 | ReAct、Tool Use、分层记忆架构、Context Rot | [📖 MD](Week9讲义.md) | [📄 PDF](pdfs/Week9讲义.pdf) |
+| Week 10 | 多智能体系统与工程案例 | LangGraph、AutoGen、Claude Code 架构、Hermes | [📖 MD](Week10讲义.md) | [📄 PDF](pdfs/Week10讲义.pdf) |
 
 后续的 Week 11（MCP 与 Agent 评估）、Week 12（DeepSeek 深度解析）、Week 13（Qwen 全家桶）等整理完成后会持续更新。
 
