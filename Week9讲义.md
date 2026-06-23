@@ -189,7 +189,7 @@ Agent 则不同。它接受一个**高层次的目标**（Goal），然后自主
 
 这时候，模型需要的不仅是**推理**，还需要**行动**——去查询实时信息。
 
-**ReAct（Reason + Act）** 正是为了解决这个问题而生的。它是 2022 年由 Yao et al. 在论文 *"ReAct: Synergizing Reasoning and Acting in Language Models"* 中提出的，将 **推理（Reasoning）** 和 **行动（Acting）**统 一在一个框架下。
+**ReAct（Reason + Act）** 正是为了解决这个问题而生的。它是 2022 年由 Yao et al. 在论文 *"ReAct: Synergizing Reasoning and Acting in Language Models"* 中提出的，将 **推理（Reasoning）** 和 **行动（Acting）** 统 一在一个框架下。
 
 ### 2.2 ReAct 的核心思想
 
@@ -299,7 +299,7 @@ sequenceDiagram
 
 这里有几个重要的工程细节：
 
-**停止条件检测（Stop Condition）**：Agent 框架需要检测模型是否输出了"行动"（需要继续）还是"最终答案"（可以停止）。通常通过特定的停止词（Stop Token）或正则匹配来实现。具体来说，常见策略包括：在 Prompt 中约定格式（如 `Final Answer:`）、通过 API 的 `stop_sequences` 参数强制截断、或使用结构化 JSON 输出由框架判断 `type` 字段。模型"知道"何时完成，本质上依赖 Prompt 设计 + 训练时的 Agent 任务经验共同决定。更完整的停止策略设计将在 **Week 10 多智能体系统** 中结合具体框架（LangGraph、AutoGen）展开讨论。
+**停止条件检测（Stop Condition）**：Agent 框架需要检测模型是否输出了"行动"（需要继续）还是"最终答案"（可以停止）。通常通过特定的停止词（Stop Token）或正则匹配来实现。具体来说，常见策略包括：在 Prompt 中约定格式（如 `Final Answer:`）、通过 API 的 `stop_sequences` 参数强制截断、或使用结构化 JSON 输出由框架判断 `type` 字段。模型 **"知道"何时完成，本质上依赖 Prompt 设计 + 训练时的 Agent 任务经验共同决定。** 更完整的停止策略设计将在 **Week 10 多智能体系统** 中结合具体框架（LangGraph、AutoGen）展开讨论。
 
 **最大步数限制（Max Steps）**：为防止无限循环，必须设置最大迭代步数。如果达到上限仍未完成，需要优雅地处理（报告进度或请求用户介入）。
 
@@ -332,7 +332,7 @@ sequenceDiagram
 "让语言模型调用工具"的想法并不是从 LLM 时代才有的，但实现方式经历了显著的演进。我们可以把这段历史划分为四个范式阶段，每个阶段解决的核心问题都不同：
 
 ```
-阶段一                  阶段二                  阶段三                  阶段四
+阶段一              阶段二            阶段三            阶段四
 Prompt 工程驱动  →  自监督工具学习  →  SFT 结构化输出  →  标准化生态
 （格式不稳定）      （何时调用？）      （可靠JSON输出）      （MCP协议）
 ```
@@ -775,6 +775,8 @@ Step 3: 综合两轮检索结果，进行对比分析
 
 对于长时间运行的 Agent，"Artifact"（工件）是一个重要概念——Agent 在执行过程中生成的中间产物（如草稿、计划、代码片段），需要被持久化存储，以便在任务被中断后恢复。Claude Code 中的"Plan Mode"就是这种设计的体现。
 
+> 本节把"检索"当作黑盒使用——检索系统本身（chunking、混合检索、rerank、评估）的完整展开见专题 [RAG 与检索系统](专题学习/RAG与检索系统.md)。
+
 ### 4.4 Context Rot（上下文腐烂）问题
 
 这是 Agent 工程中一个非常实际但往往被忽视的问题。
@@ -812,6 +814,8 @@ Step 3: 综合两轮检索结果，进行对比分析
 - 用 `CLAUDE.md` 存储稳定的项目知识（相当于语义记忆）
 - 用会话内的结构化计划（Plan）跟踪任务状态（相当于工作记忆的结构化版本）
 - 在 Subagent 任务分解中，每个子任务拥有独立的上下文（避免一个长上下文的 Context Rot）
+
+> Context Rot 的系统性解法已发展为"上下文工程"这门学科（压缩 / 卸载 / 隔离三板斧 + KV cache 友好设计），见专题 [Harness 工程与上下文工程](专题学习/Harness工程与上下文工程.md)。
 
 ### 4.5 记忆系统的工程实现要点
 
