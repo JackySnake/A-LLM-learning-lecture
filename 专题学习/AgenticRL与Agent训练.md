@@ -297,3 +297,19 @@ RL 优化器是不知疲倦的漏洞挖掘机。Agent 场景的真实案例：
 - [ ] 能对比可执行奖励、相似度奖励、rubric 自评奖励的适用场景与防 hack 设计
 - [ ] 理解"环境是新的数据集"：能举出 SWE-Gym/SWE-smith 这条演进线
 - [ ] 能为一个给定业务场景判断：SFT 够用还是需要 RL
+
+---
+
+## 十、延伸方向（自主扩展）
+
+以下方向是本专题的自然延伸，各自都能撑起独立的深入学习，按需选择：
+
+| 方向 | 核心问题 | 参考起点 |
+|---|---|---|
+| **过程奖励模型（PRM）在 Agent 场景的迁移** | 数学题 PRM 验证单步推理；Agent 场景中工具调用的"中间步"如何定义正确性？环境执行结果能否替代人工标注 PRM？ | OmegaPRM、Math-Shepherd、Kimi K2 rubric 自评 |
+| **多智能体联合 RL** | 单体 RL 训练出的 Agent 如何在多 Agent 协作中稳定？角色分工（Orchestrator vs Worker）能否联合训练？博弈论与合作 RL 的边界 | MARL 经典框架（MAPPO）→ 迁移到 LLM Agent |
+| **持续 RL：部署中自我改进** | 模型上线后如何在真实用户交互中继续学习而不灾难遗忘？在线 RL vs 离线回放 vs 参数冻结 + LoRA 增量 | Week 14 持续学习（HOPE）、Hermes 技能合成对照 |
+| **Agent 评估体系的构建** | 评估指标设计直接影响 RL 训练信号质量。如何构建不可被 reward hacking 的评估？Task 粒度 vs Step 粒度 vs Outcome 粒度的权衡 | SWE-Bench、AgentBench、TAU-Bench → Week 11 评估体系 |
+| **环境工程与沙箱设计** | Agent 训练需要可重置、副作用可回滚、能并行扩展的执行环境。代码沙箱 / 浏览器沙箱 / 工具调用 Mock 各自的设计挑战 | SWE-Gym、R2E-Gym、Qwen3-Coder 2 万并行环境 |
+| **训练数据的长尾与困难样本挖掘** | 简单任务 SFT 天花板低，困难轨迹（多次失败后成功）数据稀缺。如何系统挖掘、过滤、合成长尾难例？ | 课程学习（Curriculum Learning）+ 拒绝采样迭代 |
+| **GUI Agent 专项** | 纯文本工具调用以外，屏幕截图 + 鼠标点击的 GUI 控制是另一大类 Agent。视觉 grounding 与动作空间设计与 NLP Agent 有本质差异 | SWE-Bench Multimodal、OSWorld、Week 13 GUI Agent |
