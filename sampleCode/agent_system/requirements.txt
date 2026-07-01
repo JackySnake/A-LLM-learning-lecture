@@ -1,0 +1,12 @@
+# mock/strict 后端 + pytest 工具（demo_w9.py 必需）
+pytest>=8.0
+python-dotenv>=1.0
+
+# --backend lkeap（OpenAI 兼容协议，默认真实后端）需要
+openai>=1.0
+
+# --backend anthropic（真实 Claude）需要，可选
+# anthropic>=0.40
+
+# Week 11：MCP Server/Client 封装（demo_w11.py 必需）
+mcp>=1.0

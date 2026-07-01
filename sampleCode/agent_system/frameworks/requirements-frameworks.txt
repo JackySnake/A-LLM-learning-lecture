@@ -1,0 +1,15 @@
+# Week 10 框架对照实现专用依赖——不要装进 claude_p13，用独立环境：
+#
+#   conda create -n agent_frameworks python=3.11 -y
+#   conda activate agent_frameworks
+#   pip install -r requirements-frameworks.txt
+#
+# 原因：langgraph/crewai 各自锁定 langchain-core / pydantic / litellm 的版本范围，
+# 和项目主环境（claude_p13）其他依赖容易冲突，隔离开避免互相污染。
+
+langgraph>=0.2
+langchain-openai>=0.2
+crewai>=0.80
+python-dotenv>=1.0
+pytest>=8.0
+

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+workspace/
+workspace_langgraph/
+workspace_crewai/
+workspace_mcp/
+workspace_w11/
+audit_logs/
