@@ -389,7 +389,7 @@ $f_i$ 和 $P_i$ 在 Loss 中扮演不同角色：$f_i$ 作为**系数**，反映
 
 ### 2.4 前沿视野：Routing 的进化之路 (SOTA Evolution)
 
-针对你提到的"可导函数替代"问题，学术界和工业界走出了两条不同的路：
+针对上文提到的"可导函数替代"问题，学术界和工业界走出了两条不同的路：
 
 #### 1. 学术界的尝试：Fully Differentiable MoE (Soft MoE)
 *   **代表作**：Google DeepMind 的 **Soft MoE** (2023)。
