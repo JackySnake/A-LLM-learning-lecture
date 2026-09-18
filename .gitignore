@@ -1,0 +1,11 @@
+# 项目过程文档（仅本地，不发布）
+AGENTS.md
+html_generator.py
+学习计划-正式版.md
+学习进度追踪.md
+CLAUDE.md
+
+# 系统与运行产物
+.DS_Store
+__pycache__/
+*.pyc
