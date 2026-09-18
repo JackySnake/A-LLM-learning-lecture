@@ -24,6 +24,7 @@ files = [
     "Week11讲义.md",
     "Week12讲义.md",
     "Week13讲义.md",
+    "Week14讲义.md",
 ]
 
 # CSS for print and readability
